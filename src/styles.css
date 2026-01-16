@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+/* GLOBAL ANIMATIONS & THEME */
+:root {
+    --primary: #6366f1;
+    --secondary: #ec4899;
+}
+
+/* Force Font & Background */
+.stApp {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #0f172a, #1e1b4b, #312e81, #4c1d95);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+div.stButton>button {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    font-weight: 800;
+    border-radius: 99px;
+    border: none;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+div.stButton>button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.5);
+}
+
+/* DAY CARDS */
+.day-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.day-card h3 {
+    color: #818cf8;
+    border-bottom: 2px dashed rgba(99, 102, 241, 0.3);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* TIMELINE */
+.segment {
+    border-left: 3px solid #4ade80;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.segment h4 {
+    margin: 0;
+    color: #f3f4f6;
+}
+
+.segment ul {
+    list-style: none;
+    padding: 0;
+}
+
+.segment li {
+    background: rgba(255, 255, 255, 0.05);
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    /* justify-content: space-between; REMOVED to prevent weird gaps */
+    align-items: center;
+    /* Vertically center the text and price */
+    gap: 15px;
+}
+
+/* BADGES */
+.price-tag {
+    margin-left: auto;
+    /* Push to far right */
+    background: #059669;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* GIFT GUIDE */
+.gift-card {
+    border-left: 4px solid #f472b6 !important;
+}
